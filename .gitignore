@@ -1,0 +1,8 @@
+.next
+node_modules
+.npm-cache
+out
+dist
+coverage
+*.log
+public/images/jun-ho-kang-profile.jpeg
