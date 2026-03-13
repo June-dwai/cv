@@ -1359,8 +1359,17 @@ export const featuredPublications = siteContent.publications.filter(
 );
 
 export function homeNav(locale: Locale) {
-  return siteContent.navigation.map((item) => ({
+  const navItems = siteContent.navigation.map((item) => ({
     href: `/${locale}${item.href ? `/${item.href}` : ""}`,
     label: item.label[locale],
   }));
+
+  return [
+    ...navItems.slice(0, 3),
+    {
+      href: `/${locale}/news`,
+      label: locale === "ko" ? "소식" : "News",
+    },
+    ...navItems.slice(3),
+  ];
 }

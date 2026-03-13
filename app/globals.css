@@ -120,6 +120,96 @@ a {
   .fade-up {
     animation: fadeUp 0.7s ease-out both;
   }
+
+  .editor-toolbar {
+    @apply flex flex-wrap gap-2;
+  }
+
+  .editor-toolbar-group {
+    @apply flex flex-wrap gap-2 rounded-2xl border border-border bg-white/80 p-2;
+  }
+
+  .editor-toolbar-button {
+    @apply inline-flex h-9 items-center justify-center rounded-xl border border-border bg-white px-3 text-sm font-medium text-foreground transition-colors hover:border-accent/35 hover:bg-[#f7f9fb];
+  }
+
+  .editor-toolbar-button.is-active {
+    @apply border-accent/40 bg-[#edf1f4] text-foreground;
+  }
+
+  .editor-toolbar-select {
+    @apply h-9 rounded-xl border border-border bg-white px-3 text-sm text-foreground outline-none transition-colors focus:border-accent;
+  }
+
+  .editor-prose {
+    @apply text-sm leading-7 text-foreground md:text-base;
+  }
+
+  .editor-prose > * + * {
+    @apply mt-4;
+  }
+
+  .editor-prose h1,
+  .news-content h1 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  .editor-prose h2,
+  .news-content h2 {
+    @apply text-2xl md:text-[2rem];
+  }
+
+  .editor-prose h3,
+  .news-content h3 {
+    @apply text-xl md:text-2xl;
+  }
+
+  .editor-prose ul,
+  .editor-prose ol,
+  .news-content ul,
+  .news-content ol {
+    @apply pl-6;
+  }
+
+  .editor-prose ul,
+  .news-content ul {
+    list-style: disc;
+  }
+
+  .editor-prose ol,
+  .news-content ol {
+    list-style: decimal;
+  }
+
+  .editor-prose blockquote,
+  .news-content blockquote {
+    @apply border-l-2 border-accent/25 pl-4 text-muted;
+  }
+
+  .editor-prose pre,
+  .news-content pre {
+    @apply overflow-x-auto rounded-[1.25rem] bg-[#182223] px-4 py-3 text-sm text-white;
+  }
+
+  .editor-prose a,
+  .news-content a {
+    @apply text-accent underline underline-offset-4;
+  }
+
+  .editor-prose img,
+  .news-content img,
+  .editor-prose video,
+  .news-content video {
+    @apply mt-5 w-full rounded-[1.25rem] border border-border bg-[#eef1f3];
+  }
+
+  .news-content {
+    @apply text-sm leading-7 text-foreground md:text-base;
+  }
+
+  .news-content > * + * {
+    @apply mt-4;
+  }
 }
 
 @keyframes fadeUp {
