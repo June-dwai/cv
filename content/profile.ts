@@ -763,8 +763,8 @@ export const siteContent = {
         en: "Advanced AI solution for fine chemical plant operations",
       },
       client: {
-        ko: "이수스페셜티케미컬",
-        en: "ISU Specialty Chemical",
+        ko: "정밀화학사",
+        en: "Fine chemical company",
       },
       employer: "DogWoodAI",
       period: {
@@ -803,6 +803,7 @@ export const siteContent = {
       date: "2026.02.15",
       authors:
         "Ko, Y., Kang, J. H., Kum, J., Hong, S. H., Shin, B. S., & Lee, C. H.",
+      href: "https://www.sciencedirect.com/science/article/pii/S1385894726007837",
     },
     {
       title:
@@ -810,6 +811,7 @@ export const siteContent = {
       journal: "Energy Conversion and Management, Volume 328, 119561",
       date: "2025.03.15",
       authors: "Ko, Y., Kang, J. H., Do, H., Kum, J., & Lee, C. H.",
+      href: "https://www.sciencedirect.com/science/article/pii/S0196890425000846",
     },
     {
       title:
@@ -827,6 +829,7 @@ export const siteContent = {
       journal: "Chemical Engineering Journal, Volume 482, 149021",
       date: "2024.02.15",
       authors: "Chung, K., Kang, J. H., & Lee, C. H.",
+      href: "https://www.sciencedirect.com/science/article/pii/S1385894724005060",
     },
     {
       title:
@@ -834,6 +837,7 @@ export const siteContent = {
       journal: "Chemical Engineering Journal, Volume 455, 140685",
       date: "2023.01.01",
       authors: "Kum, J., Oh, H. T., Park, J., Kang, J. H., & Lee, C. H.",
+      href: "https://www.sciencedirect.com/science/article/pii/S1385894722061654",
     },
     {
       title:
@@ -852,6 +856,7 @@ export const siteContent = {
       date: "2022.06.15",
       authors:
         "Oh, H. T., Kum, J., Park, J., Vo, N. D., Kang, J. H., & Lee, C. H.",
+      href: "https://www.sciencedirect.com/science/article/pii/S0196890422004289",
     },
     {
       title:
@@ -861,6 +866,7 @@ export const siteContent = {
       date: "2022.01.05",
       authors:
         "Vo, N. D., Kang, J. H., Oh, D. H., Jung, M. Y., Chung, K., & Lee, C. H.",
+      href: "https://www.sciencedirect.com/science/article/pii/S0360319921040295",
     },
     {
       title:
@@ -868,6 +874,7 @@ export const siteContent = {
       journal: "Chemical Engineering Journal, Volume 423, 130044",
       date: "2021.11.01",
       authors: "Vo, N. D., Kang, J. H., Oh, M., & Lee, C. H.",
+      href: "https://www.sciencedirect.com/science/article/pii/S1385894721016296",
     },
     {
       title:
@@ -876,6 +883,7 @@ export const siteContent = {
       date: "2021.05.01",
       authors:
         "Bang, G., Moon, D. K., Kang, J. H., Han, Y. J., Kim, K. M., & Lee, C. H.",
+      href: "https://www.sciencedirect.com/science/article/pii/S1385894721000723",
     },
     {
       title:
@@ -893,6 +901,7 @@ export const siteContent = {
       journal: "Applied Energy, Volume 273, 115263",
       date: "2020.09.01",
       authors: "Vo, N. D., Oh, D. H., Kang, J. H., Oh, M., & Lee, C. H.",
+      href: "https://www.sciencedirect.com/science/article/pii/S0306261920307753",
     },
     {
       title:
@@ -900,6 +909,7 @@ export const siteContent = {
       journal: "Energy, Volume 200, 117586",
       date: "2020.06.01",
       authors: "Lee, W. S., Kang, J. H., Lee, J. C., & Lee, C. H.",
+      href: "https://www.sciencedirect.com/science/article/pii/S0360544220306939",
     },
     {
       title:
@@ -908,6 +918,7 @@ export const siteContent = {
       date: "2017.02.08",
       authors:
         "Han, Y. J., Kang, J. H., Kim, H. E., Moon, J. H., Cho, C. H., & Lee, C. H.",
+      href: "https://pubs.acs.org/doi/abs/10.1021/acs.iecr.6b04608",
     },
   ] satisfies PublicationEntry[],
   presentations: [
@@ -1258,8 +1269,8 @@ export const siteContent = {
         en: "ANN-based HCR process prediction AI program development",
       },
       sponsor: {
-        ko: "GS칼텍스",
-        en: "GS Caltex",
+        ko: "국내 정유 4사 중 1곳",
+        en: "One of Korea's four major refiners",
       },
       period: {
         ko: "2020.10 - 2023.01",
@@ -1272,8 +1283,8 @@ export const siteContent = {
         en: "Membrane-PSA hybrid process development for CO2 capture and high-purity hydrogen production",
       },
       sponsor: {
-        ko: "과학기술정보통신부 / SINTEF 국제공동과제",
-        en: "MSIT / international collaboration with SINTEF",
+        ko: "과학기술정보통신부 / 노르웨이 SINTEF 국제공동과제",
+        en: "MSIT / international collaboration with SINTEF, Norway",
       },
       period: {
         ko: "2020.07 - 2022.07",
@@ -1286,8 +1297,8 @@ export const siteContent = {
         en: "Machine-learning enhancement of SMR-PSA hydrogen production processes",
       },
       sponsor: {
-        ko: "과학기술정보통신부 / PGU 국제공동과제",
-        en: "MSIT / international collaboration with PGU",
+        ko: "과학기술정보통신부 / 이란 PGU 국제공동과제",
+        en: "MSIT / international collaboration with PGU, Iran",
       },
       period: {
         ko: "2019.11 - 2022.08",
@@ -1300,8 +1311,8 @@ export const siteContent = {
         en: "Membrane-PSA integrated process development for CO recovery from LDG",
       },
       sponsor: {
-        ko: "과학기술정보통신부",
-        en: "Ministry of Science and ICT",
+        ko: "과학기술정보통신부 / 한국화학연구원, 포항산업과학연구원(RIST)",
+        en: "Ministry of Science and ICT / Korea Research Institute of Chemical Technology, Research Institute of Industrial Science & Technology (RIST)",
       },
       period: {
         ko: "2017.08 - 2019.07",

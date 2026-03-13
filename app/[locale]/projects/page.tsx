@@ -15,11 +15,6 @@ export default async function ProjectsPage({ params }: LocalePageProps) {
         <SectionHeading
           eyebrow={locale === "ko" ? "Projects" : "Projects"}
           title={locale === "ko" ? "프로젝트" : "Projects"}
-          description={
-            locale === "ko"
-              ? "실무 프로젝트와 주요 연구과제를 한 곳에서 볼 수 있게 정리했습니다."
-              : "Applied projects and major research programs collected in one place."
-          }
         />
       </section>
 

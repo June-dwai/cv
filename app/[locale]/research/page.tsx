@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { SectionHeading } from "@/components/section-heading";
 import { siteContent } from "@/content/profile";
 import { readLocale } from "@/lib/site";
@@ -34,26 +36,53 @@ export default async function ResearchPage({ params }: LocalePageProps) {
           title={locale === "ko" ? "논문" : "Research Publications"}
         />
         <div className="mt-8 space-y-4">
-          {siteContent.publications.map((publication) => (
-            <article
-              key={`${publication.date}-${publication.title}`}
-              className="rounded-[1rem] border border-border bg-white/85 p-4"
-            >
-              <div className="flex flex-wrap items-center gap-2">
-                <p className="text-sm text-muted">{publication.date}</p>
-                {publication.isLeadAuthor ? (
-                  <span className="inline-flex items-center rounded-full border border-accent/20 bg-accent/5 px-2.5 py-1 text-[0.68rem] font-semibold tracking-[0.18em] text-accent">
-                    {locale === "ko" ? "주저자" : "First author"}
-                  </span>
-                ) : null}
-              </div>
-              <h3 className="mt-2 text-lg leading-snug">{publication.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">
-                {renderHighlightedName(publication.authors)}
-              </p>
-              <p className="mt-2 text-sm text-muted">{publication.journal}</p>
-            </article>
-          ))}
+          {siteContent.publications.map((publication) =>
+            publication.href ? (
+              <Link
+                key={`${publication.date}-${publication.title}`}
+                href={publication.href}
+                target="_blank"
+                rel="noreferrer"
+                className="block rounded-[1rem] border border-border bg-white/85 p-4 transition-colors hover:border-accent/30 hover:bg-white"
+              >
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <p className="text-sm text-muted">{publication.date}</p>
+                    {publication.isLeadAuthor ? (
+                      <span className="inline-flex items-center rounded-full border border-accent/20 bg-accent/5 px-2.5 py-1 text-[0.68rem] font-semibold tracking-[0.18em] text-accent">
+                        {locale === "ko" ? "주저자" : "First author"}
+                      </span>
+                    ) : null}
+                  </div>
+                  <span className="text-sm font-semibold text-accent">→</span>
+                </div>
+                <h3 className="mt-2 text-lg leading-snug">{publication.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">
+                  {renderHighlightedName(publication.authors)}
+                </p>
+                <p className="mt-2 text-sm text-muted">{publication.journal}</p>
+              </Link>
+            ) : (
+              <article
+                key={`${publication.date}-${publication.title}`}
+                className="rounded-[1rem] border border-border bg-white/85 p-4"
+              >
+                <div className="flex flex-wrap items-center gap-2">
+                  <p className="text-sm text-muted">{publication.date}</p>
+                  {publication.isLeadAuthor ? (
+                    <span className="inline-flex items-center rounded-full border border-accent/20 bg-accent/5 px-2.5 py-1 text-[0.68rem] font-semibold tracking-[0.18em] text-accent">
+                      {locale === "ko" ? "주저자" : "First author"}
+                    </span>
+                  ) : null}
+                </div>
+                <h3 className="mt-2 text-lg leading-snug">{publication.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">
+                  {renderHighlightedName(publication.authors)}
+                </p>
+                <p className="mt-2 text-sm text-muted">{publication.journal}</p>
+              </article>
+            ),
+          )}
         </div>
       </section>
 
