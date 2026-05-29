@@ -12,7 +12,15 @@ type LocalePageProps = {
   params: Promise<{ locale: string }>;
 };
 
+function isOngoing(period: string) {
+  return /현재|present/i.test(period);
+}
+
 function getPeriodEndValue(period: string) {
+  if (isOngoing(period)) {
+    return Number.MAX_SAFE_INTEGER;
+  }
+
   const match = period.match(/(\d{4})\.(\d{2})\s*-\s*(\d{4})\.(\d{2})/);
 
   if (!match) {
@@ -39,8 +47,11 @@ export default async function HomePage({ params }: LocalePageProps) {
       period: entry.period,
       primary: localizeOrganization(locale, entry.company),
       secondary: entry.role,
+      current: isOngoing(entry.period.ko) || isOngoing(entry.period.en),
       })),
-    ...siteContent.education.map((entry) => ({
+    ...siteContent.education
+      .filter((entry) => entry.institution !== "Kyunggi High School")
+      .map((entry) => ({
       kind: { ko: "학력", en: "Education" },
       period: entry.period,
       primary: localizeOrganization(locale, entry.institution),
@@ -48,6 +59,7 @@ export default async function HomePage({ params }: LocalePageProps) {
         ko: removeGpa(entry.degree.ko),
         en: removeGpa(entry.degree.en),
       },
+      current: false,
     })),
   ].sort((a, b) => getPeriodEndValue(b.period.ko) - getPeriodEndValue(a.period.ko));
 
@@ -61,7 +73,7 @@ export default async function HomePage({ params }: LocalePageProps) {
           </h1>
         </div>
 
-        <div className="mt-8 grid gap-5 lg:grid-cols-[minmax(0,1.62fr)_minmax(220px,0.5fr)] lg:items-start">
+        <div className="mt-8 grid gap-5 lg:grid-cols-[minmax(0,1.5fr)_minmax(240px,0.58fr)] lg:items-start">
           <article className="editorial-card w-full min-w-0">
             <p className="section-label">
               {locale === "ko" ? "관심 분야" : "Areas of Interest"}
@@ -108,7 +120,7 @@ export default async function HomePage({ params }: LocalePageProps) {
             </div>
           </article>
 
-          <article className="editorial-card w-full max-w-[18.5rem] lg:ml-auto">
+          <article className="editorial-card w-full max-w-[19.5rem] lg:ml-auto">
             <p className="section-label">
               {locale === "ko" ? "학력 · 경력" : "Education · Experience"}
             </p>
@@ -119,10 +131,23 @@ export default async function HomePage({ params }: LocalePageProps) {
                   className="soft-divider pt-4 first:border-t-0 first:pt-0"
                 >
                   <div className="flex flex-wrap items-center gap-2">
-                    <p className="section-label">{entry.period[locale]}</p>
-                    <span className="inline-flex items-center rounded-full border border-border bg-white/80 px-2.5 py-1 text-[0.68rem] font-semibold tracking-[0.14em] text-muted">
-                      {entry.kind[locale]}
-                    </span>
+                    <p
+                      className={
+                        entry.current ? "section-label text-accent" : "section-label"
+                      }
+                    >
+                      {entry.period[locale]}
+                    </p>
+                    {entry.current ? (
+                      <span className="inline-flex items-center gap-1.5 rounded-full bg-accent-soft px-2.5 py-1 text-[0.68rem] font-semibold tracking-[0.14em] text-accent">
+                        <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+                        {locale === "ko" ? "재직 중" : "Present"}
+                      </span>
+                    ) : (
+                      <span className="inline-flex items-center rounded-full border border-border bg-white/80 px-2.5 py-1 text-[0.68rem] font-semibold tracking-[0.14em] text-muted">
+                        {entry.kind[locale]}
+                      </span>
+                    )}
                   </div>
                   <p className="mt-2 text-sm font-semibold text-foreground md:text-base">
                     {entry.primary}

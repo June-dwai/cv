@@ -479,10 +479,26 @@ export const siteContent = {
   ] satisfies EducationEntry[],
   experience: [
     {
+      company: "RIST",
+      role: {
+        ko: "산업가스연구그룹 책임연구원",
+        en: "Principal Researcher, Industrial Gas Research Group",
+      },
+      period: {
+        ko: "2026.06 - 현재",
+        en: "Jun 2026 - Present",
+      },
+      summary: {
+        ko: "산업가스 분리·정제 공정 연구를 수행하며, 공정 도메인 지식과 데이터 기반 모델링을 결합한 솔루션을 개발합니다.",
+        en: "Conducting research on industrial gas separation and purification processes, developing solutions that combine process-domain knowledge with data-driven modeling.",
+      },
+      highlights: [],
+    },
+    {
       company: "DogWoodAI",
       role: {
-        ko: "AI 개발자 / 연구소장",
-        en: "AI Developer / Research Lead",
+        ko: "기업부설연구소 연구소장",
+        en: "Director, Corporate R&D Center",
       },
       period: {
         ko: "2023.03 - 2025.06",

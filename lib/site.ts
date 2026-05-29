@@ -27,6 +27,10 @@ export function t(locale: Locale, value: LocalizedString): string {
 }
 
 const organizationNames: Record<string, LocalizedString> = {
+  RIST: {
+    ko: "RIST (포항산업과학연구원)",
+    en: "RIST (Research Institute of Industrial Science & Technology)",
+  },
   "Dogwood AI": {
     ko: "(주)도그우드에이아이",
     en: "DogWoodAI",
