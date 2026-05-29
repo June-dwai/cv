@@ -122,7 +122,7 @@ const posts = [
     en: {
       title: "Two Korean patent applications filed",
       excerpt:
-        "Filed two Korean patent applications: a manufacturing process management device/method and a question-answering system/method.",
+        "Filed two Korean patent applications: a manufacturing process management device and method, and a question-answering system and method.",
       html:
         "<p>Two patents on which I am a co-inventor were filed with the Korean Intellectual Property Office.</p>" +
         "<ul><li>Manufacturing process management device and method</li><li>Question-answering system and method</li></ul>",
@@ -156,16 +156,16 @@ const posts = [
       ),
     },
     en: {
-      title: "Concluded my role at DogWoodAI",
-      excerpt: "Wrapped up my role at DogWoodAI after about two years and three months.",
+      title: "Left DogWoodAI",
+      excerpt: "Concluded my tenure at DogWoodAI after about two years and three months.",
       html:
-        "<p>I wrapped up my role at DogWoodAI.</p>" +
-        "<p>As Director of the corporate R&amp;D center, I productized integrated AI solutions for chemical manufacturing and gained valuable experience combining process-domain knowledge with data-driven modeling. Many thanks to the colleagues I worked with.</p>",
+        "<p>I concluded my tenure at DogWoodAI.</p>" +
+        "<p>As Director of the corporate R&amp;D center, I productized integrated AI solutions for chemical manufacturing and gained valuable experience combining process-domain knowledge with data-driven modeling. I am grateful to the colleagues I worked alongside.</p>",
       json: doc(
-        para(text("I wrapped up my role at DogWoodAI.")),
+        para(text("I concluded my tenure at DogWoodAI.")),
         para(
           text(
-            "As Director of the corporate R&D center, I productized integrated AI solutions for chemical manufacturing and gained valuable experience combining process-domain knowledge with data-driven modeling. Many thanks to the colleagues I worked with.",
+            "As Director of the corporate R&D center, I productized integrated AI solutions for chemical manufacturing and gained valuable experience combining process-domain knowledge with data-driven modeling. I am grateful to the colleagues I worked alongside.",
           ),
         ),
       ),
@@ -193,7 +193,7 @@ const posts = [
     en: {
       title: "US patent granted — granular adsorbent for CO/CS2 separation",
       excerpt:
-        "A method for manufacturing a granular adsorbent for separating carbon monoxide or carbon disulfide was granted by the US Patent Office.",
+        "A patent covering a method for manufacturing a granular adsorbent for separating carbon monoxide or carbon disulfide was granted by the US Patent Office.",
       html:
         '<p>A patent on which I am a co-inventor, <strong>"Method for manufacturing a granular adsorbent for separating carbon monoxide or carbon disulfide,"</strong> was granted by the US Patent Office.</p>',
       json: doc(
@@ -213,10 +213,10 @@ const posts = [
     ko: {
       title: "주저자 논문 게재 — Chemical Engineering Journal",
       excerpt:
-        "산업 규모 12층 베드 진공압력순환흡착(VPSA)을 활용한 연료전지급 수소 생산 연구가 주저자로 게재되었습니다.",
+        "산업 규모 12-bed 3-layered 진공압력순환흡착(VPSA)을 활용한 연료전지급 수소 생산 연구가 주저자로 게재되었습니다.",
       html:
         '<p>주저자로 참여한 논문이 <strong>Chemical Engineering Journal</strong>(Volume 499, 156068)에 게재되었습니다.</p>' +
-        "<p>탄소 포집된 SMR 합성가스로부터 연료전지급 수소를 생산하기 위한 산업 규모 12층 베드 진공압력순환흡착(VPSA) 공정을 다루었습니다.</p>" +
+        "<p>탄소 포집된 SMR 합성가스로부터 연료전지급 수소를 생산하기 위한 산업 규모 12-bed 3-layered 진공압력순환흡착(VPSA) 공정을 다루었습니다.</p>" +
         '<p><a href="https://www.sciencedirect.com/science/article/pii/S1385894724075594" target="_blank" rel="noreferrer">논문 보기 →</a></p>',
       json: doc(
         para(
@@ -226,29 +226,29 @@ const posts = [
         ),
         para(
           text(
-            "탄소 포집된 SMR 합성가스로부터 연료전지급 수소를 생산하기 위한 산업 규모 12층 베드 진공압력순환흡착(VPSA) 공정을 다루었습니다.",
+            "탄소 포집된 SMR 합성가스로부터 연료전지급 수소를 생산하기 위한 산업 규모 12-bed 3-layered 진공압력순환흡착(VPSA) 공정을 다루었습니다.",
           ),
         ),
         para(link("논문 보기 →", "https://www.sciencedirect.com/science/article/pii/S1385894724075594")),
       ),
     },
     en: {
-      title: "Lead-author paper published in Chemical Engineering Journal",
+      title: "First-author paper published in Chemical Engineering Journal",
       excerpt:
-        "A lead-author paper on industrial-scale 12-layered-bed VPSA for fuel cell-grade H2 production was published in Chemical Engineering Journal.",
+        "A first-author paper on an industrial-scale 12-bed, 3-layered VPSA process for fuel cell-grade H2 production was published in Chemical Engineering Journal.",
       html:
-        '<p>A paper for which I am the lead author was published in <strong>Chemical Engineering Journal</strong> (Volume 499, 156068).</p>' +
-        "<p>It presents an industrial-scale 12-layered-bed vacuum pressure swing adsorption process for fuel cell-grade H2 production from carbon-captured steam methane reforming syngas.</p>" +
+        '<p>A paper on which I am the first author was published in <strong>Chemical Engineering Journal</strong> (Volume 499, 156068).</p>' +
+        "<p>It presents an industrial-scale 12-bed, 3-layered vacuum pressure swing adsorption (VPSA) process for fuel cell-grade H2 production from carbon-captured steam methane reforming syngas.</p>" +
         '<p><a href="https://www.sciencedirect.com/science/article/pii/S1385894724075594" target="_blank" rel="noreferrer">Read the paper →</a></p>',
       json: doc(
         para(
-          text("A paper for which I am the lead author was published in "),
+          text("A paper on which I am the first author was published in "),
           bold("Chemical Engineering Journal"),
           text(" (Volume 499, 156068)."),
         ),
         para(
           text(
-            "It presents an industrial-scale 12-layered-bed vacuum pressure swing adsorption process for fuel cell-grade H2 production from carbon-captured steam methane reforming syngas.",
+            "It presents an industrial-scale 12-bed, 3-layered vacuum pressure swing adsorption (VPSA) process for fuel cell-grade H2 production from carbon-captured steam methane reforming syngas.",
           ),
         ),
         para(link("Read the paper →", "https://www.sciencedirect.com/science/article/pii/S1385894724075594")),
